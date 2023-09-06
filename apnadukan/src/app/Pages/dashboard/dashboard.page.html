@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="shop-details">
+    <ion-card class="card-adjust">
+      <ion-card-content>
+        <div class="container-shopid">
+          <ion-avatar class="avatar">
+            <img
+              src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+            />
+          </ion-avatar>
+
+          <ion-label class="shop-name">{{shopdata.Shop_name}}</ion-label>
+        </div>
+
+        <div class="container-social">
+          <div>
+            <ion-icon class="icon-size" name="logo-facebook"></ion-icon>
+          </div>
+          <div>
+            <ion-icon class="icon-size" name="logo-youtube"></ion-icon>
+          </div>
+          <div>
+            <ion-icon class="icon-size" name="logo-whatsapp"></ion-icon>
+          </div>
+          <div>
+            <ion-icon class="icon-size" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="disc" slot="start "></ion-icon>
+      <ion-label class="label-size">Shop ID</ion-label>
+      <ion-label class="label-size-item grid">{{shopdata.Shop_id}}</ion-label>
+    </div>
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="person-circle" slot="start "></ion-icon>
+      <ion-label class="label-size">Shop Owoner</ion-label>
+      <ion-label class="label-size-item grid">{{shopdata.Shop_name}}</ion-label>
+    </div>
+
+    <div class="shop-Id">
+      <ion-icon
+        class="icon-size"
+        name="location-outline"
+        slot="start "
+      ></ion-icon>
+      <ion-label class="label-size">Shop Location</ion-label>
+      <ion-label class="label-size-item grid"
+        >{{shopdata.Shop_location}}</ion-label
+      >
+    </div>
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="call-outline" slot="start "></ion-icon>
+      <ion-label class="label-size">Contact Number</ion-label>
+      <ion-label class="label-size-item grid"
+        >{{shopdata.Shop_number}}</ion-label
+      >
+    </div>
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="mail-outline" slot="start "></ion-icon>
+      <ion-label class="label-size">Email</ion-label>
+      <ion-label class="label-size-item grid"
+        >{{shopdata.Shop_email}}</ion-label
+      >
+    </div>
+  </div>
+</ion-content>

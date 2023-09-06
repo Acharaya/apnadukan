@@ -1,0 +1,87 @@
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+</ion-buttons>
+<ion-content>
+  <div class="container">
+    <div class="container-form">
+      <div class="input">
+        <ion-input
+          type="text"
+          placeholder="First name"
+          maxlength="20"
+          [(ngModel)]="UserData.first_name"
+          required
+        ></ion-input>
+      </div>
+    </div>
+    <div class="container-form">
+      <div class="input">
+        <ion-input
+          type="text"
+          placeholder="Last name"
+          maxlength="20"
+          [(ngModel)]="UserData.last_name"
+          required
+        ></ion-input>
+      </div>
+    </div>
+
+    <div class="container-form">
+      <div class="input st">
+        <ion-input
+          type="text"
+          placeholder="Email"
+          [(ngModel)]="UserData.email"
+          required
+        ></ion-input>
+      </div>
+    </div>
+
+    <div class="container-form">
+      <div class="input">
+        <ion-input
+          placeholder="Password"
+          type="password"
+          maxlength="20"
+          [(ngModel)]="UserData.password"
+          required
+        ></ion-input>
+      </div>
+    </div>
+    <div class="container-form">
+      <div class="input">
+        <ion-input
+          placeholder="Confirm password"
+          type="password"
+          maxlength="20"
+          minlength="6"
+          required
+        ></ion-input>
+      </div>
+    </div>
+
+    <div class="container-form">
+      <ion-button shape="round" (click)="register() ">Signup</ion-button>
+    </div>
+
+    <div class="container-foot">
+      <div class="social">
+        <div class="icon-select">
+          <ion-icon name="mail" class="icon-size"></ion-icon>
+        </div>
+
+        <div class="icon-select">
+          <ion-icon name="logo-twitter" class="icon-size"></ion-icon>
+        </div>
+
+        <div class="icon-select">
+          <ion-icon name="logo-facebook" class="icon-size"></ion-icon>
+        </div>
+
+        <div class="icon-select">
+          <ion-icon name="logo-discord" class="icon-size"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

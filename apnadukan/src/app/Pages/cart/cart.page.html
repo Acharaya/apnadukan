@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <div class="container-header-cart">
+      <ion-title>Cart</ion-title>
+      <ion-icon
+        class="icon-size"
+        name="bag"
+        [routerLink]="['/cart']"
+        routerLinkActive="router-link-active"
+      ></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="item">
+    <ion-card-header>
+      <div class="card-header">
+        <ion-label class="product-name">Product</ion-label>
+        <ion-icon class="cancel" name="close-circle"></ion-icon>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="card-content">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+          />
+        </ion-thumbnail>
+        <ion-label class="price">25</ion-label>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="cart-card">
+    <div class="cart-info">
+      <div class="total">
+        <ion-label class="total-tag">Total</ion-label>
+        <ion-label class="price-value">2000$</ion-label>
+      </div>
+      <div class="order-type">
+        <ion-radio-group class="order-value" [(ngModel)]="cart.Ordertype">
+          <label class="order-type-title">Order type</label>
+          <ion-item>
+            <ion-label>Store pickup</ion-label>
+            <ion-radio slot="start" value="Store pickup"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Home delivery</ion-label>
+            <ion-radio slot="start" value="Home delivery"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </div>
+
+      <div class="Payment">
+        <ion-radio-group class="order-value" [(ngModel)]="cart.Payment">
+          <label class="order-type-title">Payment</label>
+          <ion-item>
+            <ion-label>Pay on Shop</ion-label>
+            <ion-radio slot="start" value="Pay on shop"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Online payment</ion-label>
+            <ion-radio slot="start" value="Online payment"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <div class="confirm">
+          <ion-button
+            [routerLink]="['/bill-info']"
+            routerLinkActive="router-link-active"
+            color="success"
+            size="small"
+            (click)="cartStatus()"
+            >Confirm Order</ion-button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

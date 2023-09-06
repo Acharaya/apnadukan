@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bill_data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.bill {
+  width: 500px;
+  height: 500px;
+}
+
+.bill_title {
+  font-size: large;
+  color: grey;
+}
+
+.bill_data {
+  color: grey;
+  font-weight: bold;
+}
+
+.bill_data_price {
+  color: greenyellow;
+}
+
+.bill_confirm {
+  color: green;
+  font-size: 30px;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm {
+  margin-top: 50px;
+}

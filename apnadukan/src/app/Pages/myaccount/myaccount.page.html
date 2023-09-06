@@ -1,0 +1,171 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <div class="container-header-cart">
+      <ion-title>User Account</ion-title>
+      <ion-icon
+        class="icon-size"
+        name="bag"
+        [routerLink]="['/cart']"
+        routerLinkActive="router-link-active"
+      ></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="shop-details">
+    <ion-card class="card-adjust">
+      <ion-card-content>
+        <div class="container-shopid">
+          <ion-avatar class="avatar">
+            <img
+              src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+            />
+          </ion-avatar>
+
+          <ion-label class="label-size"
+            >{{userdata.first_name}}{{ " " }}{{userdata.last_name}}</ion-label
+          >
+        </div>
+
+        <div class="container-social">
+          <div>
+            <ion-icon class="icon-size" name="logo-facebook"></ion-icon>
+          </div>
+          <div>
+            <ion-icon class="icon-size" name="logo-youtube"></ion-icon>
+          </div>
+          <div>
+            <ion-icon class="icon-size" name="logo-whatsapp"></ion-icon>
+          </div>
+          <div>
+            <ion-icon class="icon-size" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="disc" slot="start "></ion-icon>
+      <ion-label class="label-size">User Id</ion-label>
+      <ion-label class="label-size-item grid">{{userdata.User_id}}</ion-label>
+    </div>
+
+    <!-- <div class="shop-Id">
+      <ion-icon class="icon-size" name="person-circle" slot="start "></ion-icon>
+      <ion-label class="label-size">Shop Owoner</ion-label>
+      <ion-label class="label-size-item grid">{{shopdata.Shop_name}}</ion-label>
+    </div> -->
+    <!-- 
+    <div class="shop-Id">
+      <ion-icon
+        class="icon-size"
+        name="location-outline"
+        slot="start "
+      ></ion-icon>
+      <ion-label class="label-size">Shop Location</ion-label>
+      <ion-label class="label-size-item grid"
+        >{{shopdata.Shop_location}}</ion-label
+      >
+    </div> -->
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="call-outline" slot="start "></ion-icon>
+      <ion-label class="label-size">Contact Number</ion-label>
+      <ion-label class="label-size-item grid">+917829467839</ion-label>
+    </div>
+
+    <div class="shop-Id">
+      <ion-icon class="icon-size" name="mail-outline" slot="start "></ion-icon>
+      <ion-label class="label-size">Email</ion-label>
+      <ion-label class="label-size-item grid">{{userdata.email}}</ion-label>
+    </div>
+
+    <div class="shop-button">
+      <ion-button
+        *ngIf="isShop=='false'"
+        id="add_product"
+        shape="round"
+        class="bt-space-op"
+        >Open shop</ion-button
+      >
+      <ion-button shape="round" class="bt-space-lgout" (click)="signout()"
+        ><ion-icon name="log-out"></ion-icon
+      ></ion-button>
+    </div>
+  </div>
+
+  <!-- ====================================
+      Shop creation form
+      
+      =========================================-->
+
+  <ion-modal class="modal" trigger="add_product">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Create shop</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="modal-container-main">
+          <ion-item>
+            <ion-label position="floating">Shop name</ion-label>
+            <ion-input [(ngModel)]="shop.Shop_name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Shop Email</ion-label>
+
+            <ion-textarea [(ngModel)]="shop.Shop_email"></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Mobile number</ion-label>
+
+            <ion-textarea [(ngModel)]="shop.Shop_number"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Shop Location</ion-label>
+            <ion-input [(ngModel)]="shop.Shop_location"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Shop Description</ion-label>
+
+            <ion-textarea [(ngModel)]="shop.Shop_description"></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Category</ion-label>
+            <ion-select [(ngModel)]="shop.Shop_type">
+              <ion-select-option value="Art & Craft"
+                >Art & Craft</ion-select-option
+              >
+              <ion-select-option value="Clothings">Clothings</ion-select-option>
+              <ion-select-option value="Gadgets">Gadgets</ion-select-option>
+              <ion-select-option value="Toys">Toys</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        <div class="modal-container">
+          <ion-button shape="round" (click)="add(shop)">Add</ion-button>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal class="modal" trigger="delete_shop">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Product Remove confirmations</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content> </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

@@ -1,0 +1,129 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <div class="container-header-cart">
+      <ion-title>Shop</ion-title>
+      <ion-icon class="icon-size" name="bag"></ion-icon>
+      <ion-badge color="success" class="badge_info"
+        ><ion-label>10</ion-label></ion-badge
+      >
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container-search">
+    <ion-searchbar
+      class="searchbar"
+      [(ngModel)]="filterterm"
+      animated
+    ></ion-searchbar>
+  </div>
+
+  <div class="slider">
+    <ion-card class="slider-card">
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-img class="pd_image" src="assets/3.png"></ion-img>
+        </ion-slide>
+        <ion-slide>
+          <ion-img class="pd_image" src="assets/4.png"></ion-img>
+        </ion-slide>
+        <ion-slide>
+          <ion-img class="pd_image" src="assets/5.png"></ion-img>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="topshop-card">
+          <ion-card-content>
+            <div
+              class="container-topshop"
+              [routerLink]="['/shop']"
+              routerLinkActive="router-link-active"
+            >
+              <ion-icon
+                name="browsers"
+                class="icon-size"
+                slot="start"
+              ></ion-icon>
+              <ion-label class="topshop-name">Product name</ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card class="topshop-card">
+          <ion-card-content>
+            <div class="container-topshop">
+              <ion-icon
+                name="browsers"
+                class="icon-size"
+                slot="start"
+              ></ion-icon>
+              <ion-label class="topshop-name">Product name</ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        size="12"
+        size-xs="12"
+        size-sm="6"
+        size-md="4"
+        size-lg="3"
+        *ngFor="let product of productdata|filter:filterterm "
+      >
+        <ion-card
+          class="card-adjust"
+          [routerLink]="['/product']"
+          routerLinkActive="router-link-active"
+          [state]="product"
+        >
+          <div class="container">
+            <div class="usersvg">
+              <ion-icon class="user" name="albums" slot="start"></ion-icon>
+            </div>
+            <div class="heart dheart">
+              <ion-icon class="icon-size" name="heart-circle"></ion-icon>
+            </div>
+          </div>
+
+          <ion-card-content>
+            <div class="container-product-detail">
+              <div class="product-name">
+                <ion-label>{{product.Product_name}}</ion-label>
+              </div>
+              <div class="product-price">
+                <ion-label>{{product.Product_price}}</ion-label>
+              </div>
+            </div>
+            <div class="container-rating">
+              <ion-icon class="icon-size-rating" name="star"></ion-icon>
+              <ion-icon class="icon-size-rating" name="star"></ion-icon>
+              <ion-icon class="icon-size-rating" name="star"></ion-icon>
+              <ion-icon class="icon-size-rating" name="star"></ion-icon>
+              <ion-icon class="icon-size-rating" name="star"></ion-icon>
+              <ion-icon
+                class="icon-size add-to-cart"
+                name="chevron-down-circle"
+              ></ion-icon>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

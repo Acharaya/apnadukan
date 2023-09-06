@@ -1,0 +1,7 @@
+{
+  "name": "apnadukan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,63 @@
+.icon-size {
+  font-size: 34px;
+  color: rgb(255, 47, 109);
+  cursor: pointer;
+}
+
+.icon-adjust {
+  padding-right: 30px;
+}
+.icon-size:hover {
+  color: gold;
+}
+.card-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// modal adjustment
+
+.modal {
+  --border-radius: 12px;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.modal-container-main {
+  padding-top: 20px;
+}
+
+.upload {
+  width: 100px;
+  height: 100px;
+  color: aquamarine;
+}
+
+.upload_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-header-cart {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  color: #6f5a7e;
+}
+
+.icon-size2 {
+  font-size: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}

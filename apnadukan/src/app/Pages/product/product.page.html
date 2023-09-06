@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <div class="container-header-cart">
+      <ion-title>Product</ion-title>
+      <ion-icon
+        class="icon-size"
+        name="bag"
+        [routerLink]="['/cart']"
+        routerLinkActive="router-link-active"
+        [state]="product"
+      ></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="slider">
+    <ion-card class="slider-card">
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-img src="assets\2.jpg"></ion-img>
+        </ion-slide>
+        <ion-slide>
+          <h1>TOP product</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Slide 3</h1>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </div>
+
+  <div class="product-info">
+    <div class="product-title">
+      <div class="product-name">
+        <ion-label>{{Product.Product_name}}</ion-label>
+        <ion-button
+          class="buy-button"
+          shape="round"
+          [routerLink]="['/cart']"
+          routerLinkActive="router-link-active"
+          >Buy</ion-button
+        >
+      </div>
+      <!-- <div class="button-buy">
+        <ion-button shape="round">Buy</ion-button>
+      </div> -->
+
+      <div class="product-price">
+        <ion-label>{{Product.Product_price}}</ion-label>
+      </div>
+    </div>
+    <div class="product-description">
+      <ion-label>Description</ion-label>
+      <ion-label class="description">{{Product.Product_description}}</ion-label>
+    </div>
+  </div>
+</ion-content>

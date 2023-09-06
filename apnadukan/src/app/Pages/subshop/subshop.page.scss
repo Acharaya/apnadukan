@@ -1,0 +1,114 @@
+.container {
+  //  border: 2px solid goldenrod;
+  display: flex;
+  margin-top: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopname {
+  //border: 2px solid green;
+  margin-right: 10%;
+}
+
+.user {
+  font-size: 60px;
+}
+
+.usersvg {
+  margin-left: 5%;
+}
+
+.heart {
+  //border: 2px solid green;
+  color: #fe8297;
+  height: 100%;
+  align-self: flex-start;
+
+  padding-right: 15px;
+}
+//Card bottom
+
+.container2 {
+  //border: 2px solid orange;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.icon-size {
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.subscribe {
+  margin-left: auto;
+}
+
+//all card adjust
+
+.card-adjust {
+  border-radius: 11px;
+  background-color: #faf1d6;
+  color: #6f5a7e;
+  min-width: 308px;
+}
+
+//Top shop
+.topshop-card {
+  border-radius: 11px;
+  color: #6f5a7e;
+  background-color: #d9f1f1;
+}
+.container-topshop {
+  //border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topshop-name {
+  margin-right: 20px;
+}
+
+//search bar
+.container-search {
+  margin-top: 30px;
+}
+
+.searchbar {
+  border: none;
+  --border-radius: 30px;
+}
+
+.topshops {
+  border: 2px solid green;
+}
+
+//slider-card
+
+.slider-card {
+  border-radius: 11px;
+  height: 200px;
+  background-color: #faf1d6;
+}
+
+ion-slides {
+  height: 100%;
+  --bullet-background: #f3c1ce;
+  --bullet-background-active: #fdafab;
+}
+
+//header cart logo
+
+.container-header-cart {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  color: #6f5a7e;
+}
+
+.pd_image {
+  height: 190px;
+}

@@ -1,0 +1,116 @@
+//shop header details
+
+.card-adjust {
+  border-radius: 12px;
+  color: #6f5a7e;
+  height: 200px;
+  margin-bottom: 80px;
+}
+
+.container-shopid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.avatar {
+  box-shadow: 10px, 6px;
+}
+
+.shop-name {
+  font-weight: bold;
+  font: helvetica;
+  letter-spacing: 4px;
+  margin-left: 20px;
+}
+
+.icon-size {
+  font-size: 22px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  color: #6f5a7e;
+}
+
+.container-social {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 80px;
+}
+
+//shop main info part
+
+.shop-Id {
+  color: #6f5a7e;
+  display: grid;
+  grid-template-columns: 40px 200px auto;
+  margin-left: 10px;
+  // background-color: red;
+  margin-bottom: 20px;
+}
+
+.label-size {
+  font-size: 18px;
+  margin-left: 15px;
+  font: 20px helvetica;
+}
+
+.label-size-item {
+  margin-left: 15px;
+  font: 18px helvetica;
+}
+
+//bottom button
+
+.shop-button {
+  margin-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bt-space-lgout {
+  margin-left: 15px;
+}
+
+.bt-space-op {
+  margin-left: 15px;
+  --background: #e1ff10;
+  color: #6f5a7e;
+}
+
+.container-header-cart {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  color: #6f5a7e;
+}
+
+.icon-size {
+  font-size: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.modal {
+  --border-radius: 12px;
+}
+
+@media screen and(max-width: 500px) {
+  .shop-Id {
+    color: #6f5a7e;
+    display: grid;
+    grid-template-rows: repeat(3 /1fr);
+    grid-template-columns: 40px 200px;
+  }
+
+  .grid {
+    grid-column-start: -2;
+    grid-column-end: -1;
+  }
+}

@@ -1,0 +1,57 @@
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+</ion-buttons>
+<ion-content>
+  <div class="container">
+    <div class="container-form">
+      <div class="label"><ion-label>Name</ion-label></div>
+      <div class="input">
+        <ion-input
+          type="text"
+          maxlength="20"
+          [(ngModel)]="UserData.email"
+          required
+        ></ion-input>
+      </div>
+    </div>
+    <div class="container-form">
+      <div class="label"><ion-label>Password</ion-label></div>
+      <div class="input">
+        <ion-input
+          [(ngModel)]="UserData.password"
+          type="password"
+          maxlength="20"
+          required
+        ></ion-input>
+      </div>
+    </div>
+
+    <div class="container-form">
+      <ion-button
+        shape="round"
+        (click)="login(UserData.password,UserData.email)"
+        >Login</ion-button
+      >
+    </div>
+
+    <div class="container-foot">
+      <div class="social">
+        <div class="icon-select">
+          <ion-icon name="mail" class="icon-size"></ion-icon>
+        </div>
+
+        <div class="icon-select">
+          <ion-icon name="logo-twitter" class="icon-size"></ion-icon>
+        </div>
+
+        <div class="icon-select">
+          <ion-icon name="logo-facebook" class="icon-size"></ion-icon>
+        </div>
+
+        <div class="icon-select">
+          <ion-icon name="logo-discord" class="icon-size"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
